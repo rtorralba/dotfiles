@@ -106,3 +106,6 @@ set laststatus=2
 "Folding
 let php_folding = 1
 set foldmethod=syntax
+
+" Function: Open tag under cursor in new tab
+map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>

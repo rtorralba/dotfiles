@@ -34,6 +34,9 @@ Bundle 'airblade/vim-gitgutter'
 " Twig
 Bundle 'evidens/vim-twig'
 
+" Shell in vim
+Bundle 'pthrasher/conqueterm-vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -109,3 +112,6 @@ set foldmethod=syntax
 
 " Function: Open tag under cursor in new tab
 map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+
+" Open shell
+map <F9> :ConqueTermSplit bash<CR>

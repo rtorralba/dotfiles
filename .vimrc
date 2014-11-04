@@ -22,20 +22,30 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'joonty/vdebug'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'php-doc-upgrade'
-Bundle 'msanders/snipmate.vim'
+" Bundle 'msanders/snipmate.vim'
+" Bundle 'honza/vim-snippets'
 Bundle 'bling/vim-airline'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'donnut/vim-php54-syntax'
 
+" Snippets
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+
 " GIT
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " Twig
 Bundle 'evidens/vim-twig'
 
 " Shell in vim
 Bundle 'pthrasher/conqueterm-vim'
+
+" Symfony
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -115,3 +125,10 @@ map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Open shell
 map <F9> :ConqueTermSplit bash<CR>
+
+" Generate tags
+command GenerateTags !ctags -R --fields=+aimS --languages=php
+
+" phpcomplete-extended
+autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
+let g:phpcomplete_index_composer_command="php /usr/local/bin/composer"

@@ -22,11 +22,10 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'joonty/vdebug'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'php-doc-upgrade'
-" Bundle 'msanders/snipmate.vim'
-" Bundle 'honza/vim-snippets'
 Bundle 'bling/vim-airline'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'donnut/vim-php54-syntax'
+Bundle 'Yggdroot/indentLine'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -132,3 +131,9 @@ command GenerateTags !ctags -R --fields=+aimS --languages=php
 " phpcomplete-extended
 autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
 let g:phpcomplete_index_composer_command="php /usr/local/bin/composer"
+
+" Charge codeigniter snippets
+autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
+
+" Remove trailing
+nnoremap <F11> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>

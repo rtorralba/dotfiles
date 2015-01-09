@@ -24,14 +24,18 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'php-doc-upgrade'
 Bundle 'bling/vim-airline'
 Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'donnut/vim-php54-syntax'
 Bundle 'Yggdroot/indentLine'
+Bundle 'kien/ctrlp.vim'
+Bundle 'StanAngeloff/php.vim'
+Bundle '2072/PHP-Indenting-for-VIm'
+Bundle 'vim-scripts/phpfolding.vim'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
+Bundle "bonsaiben/bootstrap-snippets"
 
 " GIT
 Bundle 'tpope/vim-fugitive'
@@ -43,8 +47,6 @@ Bundle 'evidens/vim-twig'
 
 " Shell in vim
 Bundle 'pthrasher/conqueterm-vim'
-
-" Symfony
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,14 +75,9 @@ set nowrap
 set hlsearch
 set smartindent
 
-"Quitar la toolbar para tener más espacio
-set guioptions-=T
-
-"Quitar la barra de menú para tener más espacio
-set guioptions-=m
-
 filetype plugin on
 syntax enable
+syntax on
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 let php_sql_query=1
 let php_htmlInStrings=1
@@ -93,31 +90,21 @@ let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeChDirMode=2
 let g:nerdtree_tabs_open_on_gui_startup=0
 
-" Tabs
-"set guitablabel=%t
+" gui
+set guioptions-=T "Quitar la toolbar para tener más espacio
+set guioptions-=m "Quitar la barra de menú para tener más espacio
 set guitablabel=\[%N\]\ %t\ %M
 
-"Brackets
-"inoremap { {<CR>}<Esc>ko<Tab>
-"
-""Autoclose
-"inoremap [ []<Esc>i
-"inoremap ( ()<Esc>i
-"inoremap " ""<Esc>i
-"inoremap ' ''<Esc>i
-
-"XML tags
-""autocmd FileType html,xml inoremap > ><CR></<C-X><C-O><Esc>ko<Tab>
-
-"php-doc
+" php-doc
 nnoremap <C-P> :call PhpDocSingle()<CR>
 
-"Airline
+" Airline
 set laststatus=2
 
-"Folding
-let php_folding = 1
-set foldmethod=syntax
+" phpfolding
+let php_folding=0
+autocmd FileType php setlocal foldmethod=manual
+autocmd FileType php EnableFastPHPFolds
 
 " Function: Open tag under cursor in new tab
 map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -127,10 +114,6 @@ map <F9> :ConqueTermSplit bash<CR>
 
 " Generate tags
 command GenerateTags !ctags -R --fields=+aimS --languages=php
-
-" phpcomplete-extended
-autocmd  FileType  php setlocal omnifunc=phpcomplete_extended#CompletePHP
-let g:phpcomplete_index_composer_command="php /usr/local/bin/composer"
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter

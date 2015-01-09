@@ -102,6 +102,7 @@ nnoremap <C-P> :call PhpDocSingle()<CR>
 set laststatus=2
 
 " phpfolding
+let g:DisableAutoPHPFolding = 1
 let php_folding=0
 autocmd FileType php setlocal foldmethod=manual
 autocmd FileType php EnableFastPHPFolds

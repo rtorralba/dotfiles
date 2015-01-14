@@ -46,7 +46,7 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'evidens/vim-twig'
 
 " Shell in vim
-Bundle 'pthrasher/conqueterm-vim'
+"Bundle 'pthrasher/conqueterm-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -121,3 +121,13 @@ autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
 
 " Remove trailing
 nnoremap <F11> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+"syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0

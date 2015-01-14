@@ -89,6 +89,7 @@ let NERDTreeShowBookmarks=1
 let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeChDirMode=2
 let g:nerdtree_tabs_open_on_gui_startup=0
+let g:nerdtree_tabs_focus_on_files=1
 
 " gui
 set guioptions-=T "Quitar la toolbar para tener más espacio

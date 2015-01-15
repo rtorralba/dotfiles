@@ -121,7 +121,16 @@ command GenerateTags !ctags -R --fields=+aimS --languages=php
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
 
 " Remove trailing
-nnoremap <F11> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+function RemoveTrailing()
+    if !&binary && &filetype != 'diff'
+        normal mz
+        normal Hmy
+        %s/\s\+$//e
+        normal 'yz<CR>
+        normal `z
+    endif
+endfunction
+command RemoveTrailing call RemoveTrailing()
 
 "syntastic
 set statusline+=%#warningmsg#

@@ -29,6 +29,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'StanAngeloff/php.vim'
 Bundle '2072/PHP-Indenting-for-VIm'
 Bundle 'vim-scripts/phpfolding.vim'
+Bundle 'dkprice/vim-easygrep'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"

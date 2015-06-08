@@ -115,7 +115,7 @@ map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <F9> :ConqueTermSplit bash<CR>
 
 " Generate tags
-command GenerateTags !ctags -R --fields=+aimS --languages=php
+command GenerateTags !ctags -R --fields=+aimS --languages=php -f ./.git/tags
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
@@ -141,3 +141,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+set tags=./.git/tags

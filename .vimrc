@@ -32,6 +32,7 @@ Bundle 'vim-scripts/phpfolding.vim'
 Bundle 'dkprice/vim-easygrep'
 Bundle 'captbaritone/better-indent-support-for-php-with-html'
 Plugin 'othree/html5.vim'
+Plugin 'tpope/vim-surround'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"

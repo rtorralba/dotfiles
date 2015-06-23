@@ -15,7 +15,6 @@ Plugin 'gmarik/Vundle.vim'
 
 " Mis plugins
 Bundle 'scrooloose/nerdtree'
-Bundle 'jistr/vim-nerdtree-tabs'
 Bundle 'scrooloose/syntastic'
 Bundle 'tmhedberg/matchit'
 Bundle 'Raimondi/delimitMate'
@@ -24,15 +23,11 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'php-doc-upgrade'
 Bundle 'bling/vim-airline'
 Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'Yggdroot/indentLine'
-Bundle 'kien/ctrlp.vim'
-Bundle 'StanAngeloff/php.vim'
-Bundle '2072/PHP-Indenting-for-VIm'
 Bundle 'vim-scripts/phpfolding.vim'
-Bundle 'dkprice/vim-easygrep'
-Bundle 'captbaritone/better-indent-support-for-php-with-html'
-Plugin 'othree/html5.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/minibufexpl.vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -45,12 +40,6 @@ Bundle "bonsaiben/bootstrap-snippets"
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
-
-" Twig
-Bundle 'evidens/vim-twig'
-
-" Shell in vim
-"Bundle 'pthrasher/conqueterm-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -88,8 +77,8 @@ let php_sql_query=1
 let php_htmlInStrings=1
 
 " NERDTree
-"map <silent> <Tab> :NERDTreeToggle<CR>
-map <silent> <Tab> :NERDTreeTabsToggle<CR>
+map <silent> <Tab> :NERDTreeToggle<CR>
+"map <silent> <Tab> :NERDTreeTabsToggle<CR>
 let NERDTreeShowBookmarks=1
 let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeChDirMode=2
@@ -120,7 +109,7 @@ map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <F9> :ConqueTermSplit bash<CR>
 
 " Generate tags
-command GenerateTags !ctags -R --fields=+aimS --languages=php -f ./.git/tags
+command GenerateTags !ctags -R --tag-relative=yes --exclude=.git --languages=php -f ./.git/tags
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
@@ -148,3 +137,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 set tags=./.git/tags
+
+" surround with tr function
+vmap tr di<?= tr('<ESC>pa') ?><ESC>
+
+set t_Co=256
+
+let g:miniBufExplMapCTabSwitchBufs = 1
+
+let g:easytags_file = '.git/tags'
+set tags=.git/tags;
+let g:easytags_dynamic_files = 1
+let g:easytags_auto_highlight = 1

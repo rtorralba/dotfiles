@@ -109,7 +109,7 @@ map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <F9> :ConqueTermSplit bash<CR>
 
 " Generate tags
-command GenerateTags !ctags -R --tag-relative=yes --exclude=.git --languages=php -f ./.git/tags
+command GenerateTags !ctags -R --tag-relative=yes --exclude=.git -f ./.git/tags
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter

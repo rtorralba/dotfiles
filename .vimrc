@@ -23,9 +23,9 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'php-doc-upgrade'
 Bundle 'bling/vim-airline'
 Bundle 'shawncplus/phpcomplete.vim'
+Bundle 'Yggdroot/indentLine'
 Bundle 'vim-scripts/phpfolding.vim'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-scripts/minibufexpl.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
@@ -143,7 +143,9 @@ vmap tr di<?= tr('<ESC>pa') ?><ESC>
 
 set t_Co=256
 
-let g:miniBufExplMapCTabSwitchBufs = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:easytags_file = '.git/tags'
 set tags=.git/tags;

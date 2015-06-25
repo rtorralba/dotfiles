@@ -126,6 +126,12 @@ function RemoveTrailing()
 endfunction
 command RemoveTrailing call RemoveTrailing()
 
+" Fix mixed indent
+function FixMixedIndent()
+    %s/\t/    /g
+endfunction
+command FixMixedIndent call FixMixedIndent()
+
 "syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -151,3 +157,6 @@ let g:easytags_file = '.git/tags'
 set tags=.git/tags;
 let g:easytags_dynamic_files = 1
 let g:easytags_auto_highlight = 1
+
+map <C-Tab> :bnext<cr>
+map <C-S-Tab> :bprevious<cr>

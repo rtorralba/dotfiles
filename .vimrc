@@ -20,12 +20,8 @@ Bundle 'tmhedberg/matchit'
 Bundle 'Raimondi/delimitMate'
 Bundle 'joonty/vdebug'
 Bundle 'nanotech/jellybeans.vim'
-Bundle 'php-doc-upgrade'
 Bundle 'bling/vim-airline'
-Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'Yggdroot/indentLine'
 Bundle 'vim-scripts/phpfolding.vim'
-Plugin 'tpope/vim-surround'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
@@ -82,8 +78,9 @@ map <silent> <Tab> :NERDTreeToggle<CR>
 let NERDTreeShowBookmarks=1
 let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeChDirMode=2
-let g:nerdtree_tabs_open_on_gui_startup=0
-let g:nerdtree_tabs_focus_on_files=1
+let NERDTreeQuitOnOpen=1
+"let g:nerdtree_tabs_open_on_gui_startup=0
+"let g:nerdtree_tabs_focus_on_files=1
 
 " gui
 set guioptions-=T "Quitar la toolbar para tener más espacio

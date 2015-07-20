@@ -157,3 +157,32 @@ let g:easytags_auto_highlight = 1
 
 map <C-Tab> :bnext<cr>
 map <C-S-Tab> :bprevious<cr>
+
+" Persistent undo
+set undodir=~/.vim/undodir
+set undofile
+
+" Online doc
+function! OnlineDoc()
+    let s:wordUnderCursor = expand("<cword>")
+
+    if &ft =~ "cpp"
+        let s:urlTemplate = "http://doc.trolltech.com/4.1/%.html"
+    elseif &ft =~ "ruby"
+        let s:urlTemplate = "http://www.ruby-doc.org/core/classes/%.html"
+    elseif &ft =~ "perl"
+        let s:urlTemplate = "http://perldoc.perl.org/functions/%.html"
+    elseif &ft =~ "php"
+        let s:urlTemplate = "http://php.net/manual/es/function.%.php"
+        let s:wordUnderCursor = substitute(s:wordUnderCursor, "_", "-", "g")
+        echo s:wordUnderCursor
+    else
+        return
+    endif
+    let s:browser = "google-chrome-stable"
+    let s:url = substitute(s:urlTemplate, "%", s:wordUnderCursor, "g")
+    let s:cmd = "silent !" . s:browser . " " . s:url . "&"
+    execute s:cmd
+endfunction
+" Online doc search.
+map <F3> :call OnlineDoc()<CR>

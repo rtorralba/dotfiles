@@ -16,6 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 " Mis plugins
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'tmhedberg/matchit'
 Bundle 'Raimondi/delimitMate'
 Bundle 'joonty/vdebug'

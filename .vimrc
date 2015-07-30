@@ -93,8 +93,19 @@ set guitablabel=\[%N\]\ %t\ %M
 " php-doc
 nnoremap <C-P> :call PhpDocSingle()<CR>
 
-" Airline
+" Airline -----------------------------------------
 set laststatus=2
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+
+" Airline: syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+"Airline ------------------------------------------
 
 " phpfolding
 let g:DisableAutoPHPFolding = 1
@@ -132,10 +143,6 @@ function FixMixedIndent()
 endfunction
 command FixMixedIndent call FixMixedIndent()
 
-"syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -148,10 +155,6 @@ set tags=./.git/tags
 vmap tr di<?= tr('<ESC>pa') ?><ESC>
 
 set t_Co=256
-
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#fnamemod = ':t'
 
 let g:easytags_file = '.git/tags'
 set tags=.git/tags;

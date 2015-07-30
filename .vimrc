@@ -16,6 +16,7 @@ Plugin 'gmarik/Vundle.vim'
 " Mis plugins
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'tmhedberg/matchit'
 Bundle 'Raimondi/delimitMate'
 Bundle 'joonty/vdebug'
@@ -57,7 +58,6 @@ filetype plugin indent on    " required
 
 colorscheme jellybeans
 set nu
-set relativenumber
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4

@@ -58,7 +58,6 @@ filetype plugin indent on    " required
 
 colorscheme jellybeans
 set nu
-set relativenumber
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4

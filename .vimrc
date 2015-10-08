@@ -22,9 +22,10 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'joonty/vdebug'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
-Bundle 'vim-scripts/phpfolding.vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'Yggdroot/indentLine'
+Plugin 'vim-scripts/EasyGrep'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -40,6 +41,14 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " HTML
 Plugin 'mattn/emmet-vim'
+Plugin 'evidens/vim-twig'
+
+" PHP
+Bundle 'vim-scripts/phpfolding.vim'
+Bundle 'docteurklein/vim-symfony'
+Bundle 'shawncplus/phpcomplete.vim'
+Bundle 'arnaud-lb/vim-php-namespace'
+
 
 " Ionic
 Plugin 'burnettk/vim-angular'
@@ -159,6 +168,9 @@ set tags=./.git/tags
 " surround with tr function
 vmap tr di<?= tr('<ESC>pa') ?><ESC>
 
+" surround with getSEOLink function
+vmap eo di<?= getSEOLink('<ESC>pa') ?><ESC>
+
 set t_Co=256
 
 let g:easytags_file = '.git/tags'
@@ -197,3 +209,6 @@ function! OnlineDoc()
 endfunction
 " Online doc search.
 map <F3> :call OnlineDoc()<CR>
+
+" indentLine faster
+let g:indentLine_faster = 1

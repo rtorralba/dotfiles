@@ -41,6 +41,9 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 " HTML
 Plugin 'mattn/emmet-vim'
 
+" Ionic
+Plugin 'burnettk/vim-angular'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -124,6 +127,8 @@ command GenerateTags !ctags -R --tag-relative=yes --exclude=.git -f ./.git/tags
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
+" Charge simple mvc framework snippets
+autocmd BufNewFile,BufRead *.php SnipMateLoadScope simplemvcf
 
 " Remove trailing
 function RemoveTrailing()

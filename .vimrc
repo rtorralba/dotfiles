@@ -86,13 +86,9 @@ let php_htmlInStrings=1
 
 " NERDTree
 map <silent> <Tab> :NERDTreeToggle<CR>
-"map <silent> <Tab> :NERDTreeTabsToggle<CR>
-let NERDTreeShowBookmarks=1
 let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
-"let g:nerdtree_tabs_open_on_gui_startup=0
-"let g:nerdtree_tabs_focus_on_files=1
 
 " gui
 set guioptions-=T "Quitar la toolbar para tener más espacio
@@ -157,6 +153,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_php_phpcs_args="--standard=PSR2"
 
 set tags=./.git/tags
 
@@ -207,3 +204,7 @@ map <F3> :call OnlineDoc()<CR>
 
 " indentLine faster
 let g:indentLine_faster = 1
+
+set colorcolumn=120
+
+command FixPHPCS !php-cs-fixer fix %

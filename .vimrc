@@ -50,6 +50,9 @@ Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
 
 
+" Ionic
+Plugin 'burnettk/vim-angular'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -129,6 +132,8 @@ command GenerateTags !ctags -R --tag-relative=yes --exclude=.git -f ./.git/tags
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
+" Charge simple mvc framework snippets
+autocmd BufNewFile,BufRead *.php SnipMateLoadScope simplemvcf
 
 " Remove trailing
 function RemoveTrailing()
@@ -153,7 +158,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_php_phpcs_args="--standard=PSR2"
+let g:syntastic_php_phpcs_args='--standard=PSR2'
+
+" Fix phpcs
+command PHPCSFix !php-cs-fixer fix %
 
 set tags=./.git/tags
 
@@ -207,4 +215,4 @@ let g:indentLine_faster = 1
 
 set colorcolumn=120
 
-command FixPHPCS !php-cs-fixer fix %
+let delimitMate_expand_cr=1

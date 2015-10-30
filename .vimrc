@@ -42,6 +42,7 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 " HTML
 Plugin 'mattn/emmet-vim'
 Plugin 'evidens/vim-twig'
+Plugin 'xsbeats/vim-blade'
 
 " PHP
 Bundle 'vim-scripts/phpfolding.vim'
@@ -124,9 +125,6 @@ autocmd FileType php EnableFastPHPFolds
 " Function: Open tag under cursor in new tab
 map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
-" Open shell
-map <F9> :ConqueTermSplit bash<CR>
-
 " Generate tags
 command GenerateTags !ctags -R --tag-relative=yes --exclude=.git -f ./.git/tags
 
@@ -158,12 +156,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_php_phpcs_args='--standard=PSR2'
+"let g:syntastic_php_checkers=['php', 'phpcs']
+let g:syntastic_php_checkers=['php']
+"let g:syntastic_php_phpcs_args='--standard=PSR2'
 
 " Fix phpcs
 command PHPCSFix !php-cs-fixer fix %
-
-set tags=./.git/tags
 
 " surround with tr function
 vmap tr di<?= tr('<ESC>pa') ?><ESC>
@@ -216,3 +214,8 @@ let g:indentLine_faster = 1
 set colorcolumn=120
 
 let delimitMate_expand_cr=1
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>

@@ -214,8 +214,3 @@ let g:indentLine_faster = 1
 set colorcolumn=120
 
 let delimitMate_expand_cr=1
-
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>

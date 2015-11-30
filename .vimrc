@@ -45,10 +45,13 @@ Plugin 'evidens/vim-twig'
 Plugin 'xsbeats/vim-blade'
 
 " PHP
+Bundle 'StanAngeloff/php.vim'
 Bundle 'vim-scripts/phpfolding.vim'
 Bundle 'docteurklein/vim-symfony'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'mikehaertl/pdv-standalone'
+Bundle 'EvanDotPro/php_getset.vim'
 
 
 " Ionic
@@ -79,6 +82,8 @@ set ai
 set encoding=utf-8
 set nowrap
 set hlsearch
+set incsearch                  " find as you type search
+set ignorecase                 " case insensitive search
 set smartindent
 
 filetype plugin on
@@ -126,7 +131,7 @@ autocmd FileType php EnableFastPHPFolds
 map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Generate tags
-command GenerateTags !ctags -R --tag-relative=yes --exclude=.git -f ./.git/tags
+command GenerateTags !ctags -R --fields=+aimS --tag-relative=yes --exclude=.git -f ./.git/tags
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter

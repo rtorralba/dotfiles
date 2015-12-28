@@ -26,6 +26,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/EasyGrep'
+Plugin 'kien/ctrlp.vim'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -46,7 +47,6 @@ Plugin 'xsbeats/vim-blade'
 
 " PHP
 Bundle 'StanAngeloff/php.vim'
-Bundle 'vim-scripts/phpfolding.vim'
 Bundle 'docteurklein/vim-symfony'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
@@ -105,7 +105,7 @@ set guioptions-=m "Quitar la barra de menú para tener más espacio
 set guitablabel=\[%N\]\ %t\ %M
 
 " php-doc
-nnoremap <C-P> :call PhpDocSingle()<CR>
+nnoremap <C-D> :call PhpDocSingle()<CR>
 
 " Airline -----------------------------------------
 set laststatus=2
@@ -122,10 +122,10 @@ set statusline+=%*
 "Airline ------------------------------------------
 
 " phpfolding
-let g:DisableAutoPHPFolding = 1
-let php_folding=0
-autocmd FileType php setlocal foldmethod=manual
-autocmd FileType php EnableFastPHPFolds
+"let g:DisableAutoPHPFolding = 1
+"let php_folding=0
+"autocmd FileType php setlocal foldmethod=manual
+"autocmd FileType php EnableFastPHPFolds
 
 " Function: Open tag under cursor in new tab
 map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -219,3 +219,5 @@ let g:indentLine_faster = 1
 set colorcolumn=120
 
 let delimitMate_expand_cr=1
+
+set diffopt=vertical

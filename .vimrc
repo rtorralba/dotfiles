@@ -36,6 +36,7 @@ Bundle "honza/vim-snippets"
 Bundle "bonsaiben/bootstrap-snippets"
 
 " GIT
+Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
@@ -221,3 +222,5 @@ set colorcolumn=120
 let delimitMate_expand_cr=1
 
 set diffopt=vertical
+
+let g:EasyGrepRecursive=1

@@ -214,3 +214,5 @@ let g:indentLine_faster = 1
 set colorcolumn=120
 
 let delimitMate_expand_cr=1
+
+map <C-F10> :Breakpoint<cr>

@@ -26,6 +26,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/EasyGrep'
+Plugin 'kien/ctrlp.vim'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -35,6 +36,7 @@ Bundle "honza/vim-snippets"
 Bundle "bonsaiben/bootstrap-snippets"
 
 " GIT
+Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
@@ -45,10 +47,12 @@ Plugin 'evidens/vim-twig'
 Plugin 'xsbeats/vim-blade'
 
 " PHP
-Bundle 'vim-scripts/phpfolding.vim'
+Bundle 'StanAngeloff/php.vim'
 Bundle 'docteurklein/vim-symfony'
 Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'mikehaertl/pdv-standalone'
+Bundle 'EvanDotPro/php_getset.vim'
 
 
 " Ionic
@@ -79,6 +83,8 @@ set ai
 set encoding=utf-8
 set nowrap
 set hlsearch
+set incsearch                  " find as you type search
+set ignorecase                 " case insensitive search
 set smartindent
 
 filetype plugin on
@@ -100,7 +106,7 @@ set guioptions-=m "Quitar la barra de menú para tener más espacio
 set guitablabel=\[%N\]\ %t\ %M
 
 " php-doc
-nnoremap <C-P> :call PhpDocSingle()<CR>
+nnoremap <C-D> :call PhpDocSingle()<CR>
 
 " Airline -----------------------------------------
 set laststatus=2
@@ -117,16 +123,16 @@ set statusline+=%*
 "Airline ------------------------------------------
 
 " phpfolding
-let g:DisableAutoPHPFolding = 1
-let php_folding=0
-autocmd FileType php setlocal foldmethod=manual
-autocmd FileType php EnableFastPHPFolds
+"let g:DisableAutoPHPFolding = 1
+"let php_folding=0
+"autocmd FileType php setlocal foldmethod=manual
+"autocmd FileType php EnableFastPHPFolds
 
 " Function: Open tag under cursor in new tab
 map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Generate tags
-command GenerateTags !ctags -R --tag-relative=yes --exclude=.git -f ./.git/tags
+command GenerateTags !ctags -R --fields=+aimS --tag-relative=yes --exclude=.git -f ./.git/tags
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
@@ -153,12 +159,12 @@ command FixMixedIndent call FixMixedIndent()
 
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"let g:syntastic_php_checkers=['php', 'phpcs']
-let g:syntastic_php_checkers=['php']
-"let g:syntastic_php_phpcs_args='--standard=PSR2'
+let g:syntastic_php_checkers=['php', 'phpcs']
+"let g:syntastic_php_checkers=['php']
+let g:syntastic_php_phpcs_args='--standard=PSR2'
 
 " Fix phpcs
 command PHPCSFix !php-cs-fixer fix %
@@ -216,3 +222,7 @@ set colorcolumn=120
 let delimitMate_expand_cr=1
 
 map <C-F10> :Breakpoint<cr>
+
+set diffopt=vertical
+
+let g:EasyGrepRecursive=1

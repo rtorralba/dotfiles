@@ -43,7 +43,7 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " HTML
 Plugin 'mattn/emmet-vim'
-Plugin 'evidens/vim-twig'
+Plugin 'qbbr/vim-twig'
 Plugin 'xsbeats/vim-blade'
 
 " PHP
@@ -54,9 +54,11 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'mikehaertl/pdv-standalone'
 Bundle 'EvanDotPro/php_getset.vim'
 
-
 " Ionic
 Plugin 'burnettk/vim-angular'
+
+" CSS
+Plugin 'ap/vim-css-color'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -95,7 +97,7 @@ let php_sql_query=1
 let php_htmlInStrings=1
 
 " NERDTree
-map <silent> <Tab> :NERDTreeToggle<CR>
+map <tab> :NERDTreeToggle<CR>
 let g:NERDTreeCopyCmd= 'cp -r '
 let NERDTreeChDirMode=2
 let NERDTreeQuitOnOpen=1
@@ -226,3 +228,4 @@ map <C-F10> :Breakpoint<cr>
 set diffopt=vertical
 
 let g:EasyGrepRecursive=1
+let g:EasyGrepCommand=1 " 0 vimgrep, 1 grep

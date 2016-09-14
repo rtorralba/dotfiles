@@ -18,12 +18,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tmhedberg/matchit'
-Bundle 'Raimondi/delimitMate'
 Bundle 'joonty/vdebug'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'bling/vim-airline'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
 Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/EasyGrep'
 Plugin 'kien/ctrlp.vim'
@@ -88,6 +85,7 @@ set hlsearch
 set incsearch                  " find as you type search
 set ignorecase                 " case insensitive search
 set smartindent
+set backspace=2
 
 filetype plugin on
 syntax enable
@@ -179,11 +177,6 @@ vmap eo di<?= getSEOLink('<ESC>pa') ?><ESC>
 
 set t_Co=256
 
-let g:easytags_file = '.git/tags'
-set tags=.git/tags;
-let g:easytags_dynamic_files = 1
-let g:easytags_auto_highlight = 1
-
 map <C-Tab> :bnext<cr>
 map <C-S-Tab> :bprevious<cr>
 
@@ -221,7 +214,7 @@ let g:indentLine_faster = 1
 
 set colorcolumn=120
 
-let delimitMate_expand_cr=1
+"let delimitMate_expand_cr=1
 
 map <C-F10> :Breakpoint<cr>
 

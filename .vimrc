@@ -1,7 +1,6 @@
 set nocompatible
 
 " Vundle
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize

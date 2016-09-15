@@ -84,7 +84,6 @@ set hlsearch
 set incsearch                  " find as you type search
 set ignorecase                 " case insensitive search
 set smartindent
-set backspace=2
 
 filetype plugin on
 syntax enable
@@ -221,3 +220,8 @@ set diffopt=vertical
 
 let g:EasyGrepRecursive=1
 let g:EasyGrepCommand=1 " 0 vimgrep, 1 grep
+
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>

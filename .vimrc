@@ -24,6 +24,8 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'vim-scripts/EasyGrep'
 Plugin 'kien/ctrlp.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " Snippets
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -50,6 +52,7 @@ Bundle 'shawncplus/phpcomplete.vim'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'mikehaertl/pdv-standalone'
 Bundle 'EvanDotPro/php_getset.vim'
+Bundle 'captbaritone/better-indent-support-for-php-with-html'
 
 " Ionic
 Plugin 'burnettk/vim-angular'
@@ -133,6 +136,11 @@ map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Generate tags
 command GenerateTags !ctags -R --fields=+aimS --tag-relative=yes --exclude=.git -f ./.git/tags
+let g:easytags_file = '.git/tags'
+set tags=.git/tags;
+let g:easytags_dynamic_files = 1
+let g:easytags_auto_highlight = 1
+let g:easytags_async = 1
 
 " Charge codeigniter snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter

@@ -25,6 +25,7 @@ Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'Xuyuanp/nerdtree-git-plugin'
+Bundle 'junegunn/gv.vim'
 
 " HTML
 Plugin 'mattn/emmet-vim'

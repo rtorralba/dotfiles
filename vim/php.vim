@@ -8,3 +8,4 @@ command PHPCSFix !php-cs-fixer fix %
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
 " Charge simple mvc framework snippets
 autocmd BufNewFile,BufRead *.php SnipMateLoadScope simplemvcf
+autocmd BufNewFile,BufRead *.blade.php set filetype=blade.html

@@ -40,6 +40,7 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'mikehaertl/pdv-standalone'
 Bundle 'EvanDotPro/php_getset.vim'
 Bundle 'captbaritone/better-indent-support-for-php-with-html'
+Bundle 'adoy/vim-php-refactoring-toolbox'
 
 " Ionic
 Plugin 'burnettk/vim-angular'

@@ -1,4 +1,3 @@
-" Remove trailing
 function RemoveTrailing()
     if !&binary && &filetype != 'diff'
         normal mz
@@ -10,8 +9,12 @@ function RemoveTrailing()
 endfunction
 command RemoveTrailing call RemoveTrailing()
 
-" Fix mixed indent
 function FixMixedIndent()
     %s/\t/    /g
 endfunction
 command FixMixedIndent call FixMixedIndent()
+
+function Phpunit()
+   execute '!vendor/bin/phpunit'
+endfunction
+command Phpunit call Phpunit()

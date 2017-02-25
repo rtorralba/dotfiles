@@ -12,6 +12,7 @@ set incsearch                  " find as you type search
 set ignorecase                 " case insensitive search
 set smartindent
 set backspace=2
+set iskeyword+=-
 
 filetype plugin on
 syntax enable

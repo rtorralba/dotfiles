@@ -1,6 +1,6 @@
 set nocompatible
 
-source ~/dotfiles/vim/vundle.vim
+source ~/dotfiles/vim/vim-plug.vim
 source ~/dotfiles/vim/editor.vim
 source ~/dotfiles/vim/nerdtree.vim
 source ~/dotfiles/vim/php.vim

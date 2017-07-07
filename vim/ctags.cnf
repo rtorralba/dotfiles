@@ -1,0 +1,9 @@
+-f .git/tags
+-R
+--tag-relative=yes
+--fields=+aimS
+--exclude=.git
+--exclude=node_modules
+--exclude=coverage
+--exclude=*.js
+--exclude=*.html

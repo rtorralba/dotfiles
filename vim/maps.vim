@@ -17,3 +17,6 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 " Advanced customization using autoload functions
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
 map <C-P> :FZF<cr>
+
+" Tag bar
+nmap <F8> :TagbarToggle<CR>

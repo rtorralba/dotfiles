@@ -8,7 +8,7 @@ endfunction
 
 function! GenerateTags()
   if v:version < 800
-    echoerr 'RunBackgroundCommand requires VIM version 8 or higher'
+    echoerr 'Requires VIM version 8 or higher'
     return
   endif
 

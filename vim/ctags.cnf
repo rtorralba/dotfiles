@@ -1,9 +1,6 @@
 -f .git/tags
--R
---tag-relative=yes
---fields=+aimS
+--recurse
+--fields=afikmsS
+--languages=php
 --exclude=.git
---exclude=node_modules
---exclude=coverage
---exclude=*.js
---exclude=*.html
+--tag-relative=yes

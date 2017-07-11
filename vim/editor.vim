@@ -9,7 +9,6 @@ set encoding=utf-8
 set nowrap
 set hlsearch
 set incsearch                  " find as you type search
-set ignorecase                 " case insensitive search
 set smartindent
 set backspace=2
 set iskeyword+=-

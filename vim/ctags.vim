@@ -17,7 +17,7 @@ function! GenerateTags()
   else
     execute "silent !rm -f .git/tags"
     let g:generateTagsOutput = tempname()
-    let command = printf('ctags --options=%s/dotfiles/vim/ctags.cnf', $HOME)
+    let command = printf('ctags-exuberant --options=%s/dotfiles/vim/ctags.cnf', $HOME)
     call job_start(command, {'close_cb': 'GenerateTagsCallback', 'out_io': 'file', 'out_name': g:generateTagsOutput})
   endif
 endfunction

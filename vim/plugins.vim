@@ -12,6 +12,7 @@ Plug 'xolox/vim-misc'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'majutsushi/tagbar'
+Plug 'sjl/gundo.vim'
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'

@@ -2,24 +2,24 @@
 map <C-D> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 
 function! GenerateTagsCallback(channel)
-  unlet g:generateTagsOutput
-  echo 'Tags generated!'
+    unlet g:generateTagsOutput
+    echo 'Tags generated!'
 endfunction
 
 function! GenerateTags()
-  if v:version < 800
-    echoerr 'Requires VIM version 8 or higher'
-    return
-  endif
+    if v:version < 800
+        echoerr 'Requires VIM version 8 or higher'
+        return
+    endif
 
-  if exists('g:generateTagsOutput')
-    echo 'Already running task in background'
-  else
-    execute "silent !rm -f .git/tags"
-    let g:generateTagsOutput = tempname()
-    let command = printf('ctags-exuberant --options=%s/dotfiles/vim/ctags.cnf', $HOME)
-    call job_start(command, {'close_cb': 'GenerateTagsCallback', 'out_io': 'file', 'out_name': g:generateTagsOutput})
-  endif
+    if exists('g:generateTagsOutput')
+        echo 'Already running task in background'
+    else
+        execute "silent !rm -f .git/tags"
+        let g:generateTagsOutput = tempname()
+        let command = printf('ctags-exuberant --options=%s/dotfiles/vim/ctags.cnf', $HOME)
+        call job_start(command, {'close_cb': 'GenerateTagsCallback', 'out_io': 'file', 'out_name': g:generateTagsOutput})
+    endif
 endfunction
 
 autocmd BufWritePost *.php call GenerateTags()

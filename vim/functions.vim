@@ -15,6 +15,6 @@ endfunction
 command FixMixedIndent call FixMixedIndent()
 
 function Phpunit()
-   execute '!vendor/bin/phpunit'
+   execute '!vendor/bin/phpunit --testdox'
 endfunction
 command Phpunit call Phpunit()

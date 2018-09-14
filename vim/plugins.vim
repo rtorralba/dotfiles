@@ -1,5 +1,4 @@
 " Mis Plugs
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tmhedberg/matchit'
@@ -11,7 +10,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'xolox/vim-misc'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'majutsushi/tagbar'
 Plug 'sjl/gundo.vim'
 
 " Snippets
@@ -25,7 +23,6 @@ Plug 'bonsaiben/bootstrap-snippets'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/gv.vim'
 
 " HTML
@@ -34,19 +31,20 @@ Plug 'qbbr/vim-twig'
 
 " PHP
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-Plug 'docteurklein/vim-symfony', { 'for': 'php' }
-Plug 'shawncplus/phpcomplete.vim', { 'for': 'php' }
 Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
-Plug 'mikehaertl/pdv-standalone', { 'for': 'php' }
-Plug 'EvanDotPro/php_getset.vim', { 'for': 'php' }
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
 Plug 'adoy/vim-php-refactoring-toolbox', { 'for': 'php' }
 Plug 'joonty/vdebug', { 'for': 'php' }
 Plug 'xsbeats/vim-blade', { 'for': 'blade.html' }
+Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 
 " Ionic
-Plug 'leafgarland/typescript-vim'
 Plug 'akz92/vim-ionic2'
+
+" Typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
+Plug 'Quramy/vim-js-pretty-template'
 
 " CSS
 Plug 'ap/vim-css-color'

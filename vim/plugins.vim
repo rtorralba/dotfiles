@@ -33,9 +33,7 @@ Plug 'qbbr/vim-twig'
 
 " PHP
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
-Plug 'arnaud-lb/vim-php-namespace', { 'for': 'php' }
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
-Plug 'adoy/vim-php-refactoring-toolbox', { 'for': 'php' }
 Plug 'joonty/vdebug', { 'for': 'php' }
 Plug 'xsbeats/vim-blade', { 'for': 'blade.html' }
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}

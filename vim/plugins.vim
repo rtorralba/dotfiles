@@ -28,8 +28,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/gv.vim'
 
 " HTML
-Plug 'mattn/emmet-vim'
-Plug 'qbbr/vim-twig'
+Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'qbbr/vim-twig', { 'for': 'twig' }
 
 " PHP
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
@@ -39,12 +39,12 @@ Plug 'xsbeats/vim-blade', { 'for': 'blade.html' }
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
 
 " Ionic
-Plug 'akz92/vim-ionic2'
+Plug 'akz92/vim-ionic2', { 'for': 'typescript' }
 
 " Typescript
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
-Plug 'Quramy/vim-js-pretty-template'
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
+Plug 'Quramy/vim-js-pretty-template', { 'for': 'javascript' }
 
 " CSS
 Plug 'ap/vim-css-color'

@@ -9,8 +9,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/EasyGrep'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'xolox/vim-misc'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sjl/gundo.vim'
 
 " Snippets
@@ -44,7 +43,7 @@ Plug 'akz92/vim-ionic2', { 'for': 'typescript' }
 " Typescript
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 Plug 'Quramy/tsuquyomi', { 'for': 'typescript' }
-Plug 'Quramy/vim-js-pretty-template', { 'for': 'javascript' }
+Plug 'Quramy/vim-js-pretty-template'
 
 " CSS
 Plug 'ap/vim-css-color'

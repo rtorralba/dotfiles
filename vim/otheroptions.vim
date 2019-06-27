@@ -15,3 +15,5 @@ let g:EasyGrepFilesToExclude=".git,node_modules,vendor,plugins,package.json,pack
 
 " For update gitgutter faster
 set updatetime=250
+
+let g:closetag_filetypes = 'html,xhtml,phtml,blade.html'

@@ -11,6 +11,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'xolox/vim-misc'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sjl/gundo.vim'
+Plug 'tpope/vim-surround'
+Plug 'alvan/vim-closetag'
+Plug 'terryma/vim-multiple-cursors'
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'

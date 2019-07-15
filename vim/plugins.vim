@@ -9,11 +9,11 @@ Plug 'Yggdroot/indentLine'
 Plug 'vim-scripts/EasyGrep'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'xolox/vim-misc'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -31,7 +31,7 @@ Plug 'junegunn/gv.vim'
 
 " HTML
 Plug 'mattn/emmet-vim', { 'for': 'html' }
-Plug 'qbbr/vim-twig', { 'for': 'twig' }
+Plug 'lumiliet/vim-twig', { 'for': 'html.twig' }
 
 " PHP
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }

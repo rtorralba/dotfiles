@@ -20,8 +20,10 @@ endfunction
 command Phpunit call Phpunit()
 
 function OpenLaravelView()
+    let oldreg=getreg('0')
     normal yi'
     let view="resources/views/".substitute(getreg('0'), "\\.", "/", "g").".blade.php"
+    let @0=oldreg
     execute "edit ".view
 endfunction
 command OpenLaravelView call OpenLaravelView()

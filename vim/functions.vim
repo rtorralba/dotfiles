@@ -18,3 +18,11 @@ function Phpunit()
    execute '!vendor/bin/phpunit --testdox'
 endfunction
 command Phpunit call Phpunit()
+
+function OpenLaravelView()
+    normal yi'
+    let view="resources/views/".substitute(getreg('0'), "\\.", "/", "g").".blade.php"
+    execute "edit ".view
+endfunction
+command OpenLaravelView call OpenLaravelView()
+nnoremap <silent>gv :OpenLaravelView<CR>

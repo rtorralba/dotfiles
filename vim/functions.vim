@@ -33,7 +33,8 @@ function OpenLaravelController()
     let oldreg=getreg('0')
     normal yi'
     let routeArray=split(getreg('0'), '@')
-    let controller="app/Http/Controllers/".routeArray[0].".php"
+    let file=substitute(routeArray[0], "\\", "/", "g").".php"
+    let controller="app/Http/Controllers/".file
     let @0=oldreg
     execute "edit ".controller
     let line=search('function '.routeArray[1].'(')

@@ -36,3 +36,5 @@ vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 
 " Extract method from selection
 vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
+
+let g:vdebug_options = {"path_maps": {"/var/www": getcwd()}, "port": 9003}

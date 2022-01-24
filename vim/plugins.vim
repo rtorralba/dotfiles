@@ -38,8 +38,9 @@ Plug 'lumiliet/vim-twig', { 'for': 'html.twig' }
 Plug 'StanAngeloff/php.vim', { 'for': 'php' }
 Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
 Plug 'joonty/vdebug', { 'for': 'php' }
-Plug 'xsbeats/vim-blade', { 'for': 'blade.html' }
-Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'jwalton512/vim-blade', { 'for': 'blade.html' }
+Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
+Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
 
 " Ionic
 Plug 'akz92/vim-ionic2', { 'for': 'typescript' }

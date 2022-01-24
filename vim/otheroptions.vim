@@ -18,4 +18,7 @@ set updatetime=250
 
 let g:closetag_filetypes = 'html,xhtml,phtml,blade.html'
 
+" For use tabs in makefile
+autocmd FileType make setlocal noexpandtab
+
 let g:snipMate = { 'snippet_version' : 1 }

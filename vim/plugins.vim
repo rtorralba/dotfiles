@@ -1,6 +1,6 @@
 " Mis Plugs
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tmhedberg/matchit'
 Plug 'nanotech/jellybeans.vim'

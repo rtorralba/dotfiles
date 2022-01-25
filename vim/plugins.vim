@@ -40,6 +40,7 @@ Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
 Plug 'joonty/vdebug', { 'for': 'php' }
 Plug 'xsbeats/vim-blade', { 'for': 'blade.html' }
 Plug 'phpactor/phpactor', {'for': 'php', 'do': 'composer install'}
+Plug 'rayburgemeestre/phpfolding.vim'
 
 " Ionic
 Plug 'akz92/vim-ionic2', { 'for': 'typescript' }

@@ -22,3 +22,5 @@ let g:closetag_filetypes = 'html,xhtml,phtml,blade.html'
 autocmd FileType make setlocal noexpandtab
 
 let g:snipMate = { 'snippet_version' : 1 }
+
+let g:shoot_save_path = $HOME . "/Imágenes/"

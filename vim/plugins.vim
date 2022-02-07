@@ -14,7 +14,7 @@ Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'jmckiern/vim-shoot', { 'do': '\"./install.py\" chromedriver' }
+Plug 'rtorralba/vim-shoot', { 'do': '\"./install.py\" chromedriver' }
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'

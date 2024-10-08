@@ -22,6 +22,9 @@ nmap <Leader>nn :call phpactor#Navigate()<CR>
 " Goto definition of class or class member under the cursor
 nmap <Leader>o :call phpactor#GotoDefinition()<CR>
 
+" Goto definition of class or class member under the cursor
+nmap <Leader>i :call phpactor#GotoImplementations()<CR>
+
 " Transform the classes in the current file
 nmap <Leader>tt :call phpactor#Transform()<CR>
 
@@ -37,4 +40,4 @@ vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 " Extract method from selection
 vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 
-let g:vdebug_options = {"path_maps": {"/var/www": getcwd()}, "port": 9003}
+let g:vdebug_options = {"path_maps": {"/var/www/html/api": getcwd()}, "port": 9003}

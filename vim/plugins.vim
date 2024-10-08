@@ -1,20 +1,29 @@
 " Mis Plugs
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'dense-analysis/ale'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdcommenter'
 Plug 'tmhedberg/matchit'
 Plug 'nanotech/jellybeans.vim'
 Plug 'bling/vim-airline'
 Plug 'Yggdroot/indentLine'
-Plug 'vim-scripts/EasyGrep'
+Plug 'dkprice/vim-easygrep'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'xolox/vim-misc'
 Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 Plug 'rtorralba/vim-shoot', { 'do': '\"./install.py\" chromedriver' }
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'sheerun/vim-polyglot'
+Plug 'vim-test/vim-test'
+Plug 'unkiwii/vim-nerdtree-sync'
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -26,7 +35,7 @@ Plug 'bonsaiben/bootstrap-snippets'
 " GIT
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'junegunn/gv.vim'
 
@@ -40,7 +49,6 @@ Plug 'captbaritone/better-indent-support-for-php-with-html', { 'for': 'php' }
 Plug 'joonty/vdebug', { 'for': 'php' }
 Plug 'jwalton512/vim-blade', { 'for': 'blade.html' }
 Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
-Plug 'rayburgemeestre/phpfolding.vim', {'for': 'php'}
 
 " Ionic
 Plug 'akz92/vim-ionic2', { 'for': 'typescript' }

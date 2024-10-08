@@ -11,8 +11,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 let g:tsuquyomi_completion_detail = 1
 
-let g:EasyGrepFilesToExclude=".git,node_modules,vendor,plugins,package.json,package-lock.json,vendor.js,laravel.log"
-
 " For update gitgutter faster
 set updatetime=250
 
@@ -24,3 +22,7 @@ autocmd FileType make setlocal noexpandtab
 let g:snipMate = { 'snippet_version' : 1 }
 
 let g:shoot_save_path = $HOME . "/Imágenes/"
+
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+let g:airline#extensions#ale#enabled = 1

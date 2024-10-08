@@ -8,15 +8,11 @@ ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 
 # Nix is broken due to timeouts, falling back to brew
 packages=(
+  git
   fd
   ripgrep
   npm
   lazygit
-  fzf
-  kubectl
-  fluxcd/tap/flux
-  k9s
-  direnv
 )
 
 # Iterate over the array and install each package

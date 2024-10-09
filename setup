@@ -6,18 +6,7 @@ mkdir -p "$XDG_CONFIG_HOME"
 
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 
-packages=(
-        neovim
-        fd
-        ripgrep
-        npm
-        lazygit
-)
-
-# Iterate over the array and install each package
-for package in "${packages[@]}"; do
-  echo "Installing $package..."
-  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
-done
+sudo apt-get update
+sudo apt-get install ripgrep
 
 echo "All packages have been installed."

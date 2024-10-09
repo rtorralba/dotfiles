@@ -6,12 +6,8 @@ mkdir -p "$XDG_CONFIG_HOME"
 
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 
-# Nix is broken due to timeouts, falling back to brew
-packages=(
-  git
-  fd
-  ripgrep
-)
+sudo apt-get update
+sudo apt-get install ripgrep
 
 # Iterate over the array and install each package
 for package in "${packages[@]}"; do

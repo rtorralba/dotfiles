@@ -12,6 +12,7 @@ packages=(
   fish
   node
   lazygit
+  git-delta
   neovim
 )
 

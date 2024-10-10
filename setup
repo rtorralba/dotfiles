@@ -6,7 +6,7 @@ mkdir -p "$XDG_CONFIG_HOME"
 
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 
-sudo apt-get update
-sudo apt-get install ripgrep
+apt-get update
+apt-get install ripgrep
 
 echo "All packages have been installed."

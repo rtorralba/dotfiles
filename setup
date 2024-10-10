@@ -12,6 +12,7 @@ sudo apt-get install ripgrep
 packages=(
   fd
   ripgrep
+  fish
   neovim
   lazygit
 )

@@ -9,4 +9,17 @@ ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 sudo apt-get update
 sudo apt-get install ripgrep
 
+packages=(
+  fd
+  ripgrep
+  neovim
+  lazygit
+)
+
+# Iterate over the array and install each package
+for package in "${packages[@]}"; do
+  echo "Installing $package..."
+  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
+done
+
 echo "All packages have been installed."

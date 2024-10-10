@@ -10,8 +10,9 @@ packages=(
   fd
   ripgrep
   fish
-  neovim
+  node
   lazygit
+  neovim
 )
 
 # Iterate over the array and install each package

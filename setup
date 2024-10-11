@@ -24,6 +24,4 @@ for package in "${packages[@]}"; do
   /home/linuxbrew/.linuxbrew/bin/brew install "$package"
 done
 
-npm install -g httpyac
-
 echo "All packages have been installed."

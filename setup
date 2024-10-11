@@ -12,7 +12,7 @@ packages=(
   ripgrep
   fish
   node
-  npm
+  httpyac
   lazygit
   git-delta
   neovim

@@ -7,9 +7,9 @@ mkdir -p "$XDG_CONFIG_HOME"
 ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 ln -sf "$PWD/lazygit" "$XDG_CONFIG_HOME"/lazygit
 
-whoami
-
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 packages=(
   fd
@@ -25,7 +25,7 @@ packages=(
 # Iterate over the array and install each package
 for package in "${packages[@]}"; do
   echo "Installing $package..."
-  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
+  brew install "$package"
 done
 
 echo "All packages have been installed."

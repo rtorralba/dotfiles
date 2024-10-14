@@ -14,7 +14,7 @@ packages=(
   ripgrep
   fish
   node
-  npm
+  httpyac
   lazygit
   git-delta
   neovim
@@ -25,7 +25,5 @@ for package in "${packages[@]}"; do
   echo "Installing $package..."
   /home/linuxbrew/.linuxbrew/bin/brew install "$package"
 done
-
-npm install -g httpyac
 
 echo "All packages have been installed."

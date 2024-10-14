@@ -29,7 +29,7 @@ packages=(
 # Iterate over the array and install each package
 for package in "${packages[@]}"; do
   echo "Installing $package..."
-  brew install "$package"
+  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
 done
 
 echo "All packages have been installed."

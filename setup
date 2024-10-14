@@ -9,7 +9,7 @@ ln -sf "$PWD/lazygit" "$XDG_CONFIG_HOME"/lazygit
 
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+/home/linuxbrew/.linuxbrew/bin/brew shellenv >>~/.profile
 
 packages=(
   fd

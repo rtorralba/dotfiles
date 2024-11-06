@@ -29,12 +29,8 @@ packages=(
 
 # Iterate over the array and install each package
 for package in "${packages[@]}"; do
-  if brew list $1 &>/dev/null; then
-    echo "${1} is already installed"
-  else
-    echo "Installing $package..."
-    /home/linuxbrew/.linuxbrew/bin/brew install "$package"
-  fi
+  echo "Installing $package..."
+  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
 done
 
 echo "All packages have been installed."

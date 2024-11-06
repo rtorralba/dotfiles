@@ -4,8 +4,8 @@
 export XDG_CONFIG_HOME="$HOME"/.config
 mkdir -p "$XDG_CONFIG_HOME"
 
-ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
-ln -sf "$PWD/lazygit" "$XDG_CONFIG_HOME"/lazygit
+#ln -sf "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
+#ln -sf "$PWD/lazygit" "$XDG_CONFIG_HOME"/lazygit
 
 #sudo mkdir /home/linuxbrew/
 #sudo chown $USER:users /home/linuxbrew/
@@ -15,26 +15,51 @@ ln -sf "$PWD/lazygit" "$XDG_CONFIG_HOME"/lazygit
 #
 #/home/linuxbrew/.linuxbrew/bin/brew shellenv >>~/.profile
 
-packages=(
-  fd
-  ripgrep
-  fish
-  node
-  httpyac
-  lazygit
-  git-delta
-  luajit
-  neovim
+#packages=(
+#  fd
+#  ripgrep
+#  fish
+#  node
+#  httpyac
+#  lazygit
+#  git-delta
+#  luajit
+#  neovim
+#)
+#
+## Iterate over the array and install each package
+#for package in "${packages[@]}"; do
+#  if brew list $1 &>/dev/null; then
+#    echo "${1} is already installed"
+#  else
+#    echo "Installing $package..."
+#    /home/linuxbrew/.linuxbrew/bin/brew install "$package"
+#  fi
+#done
+#
+#echo "All packages have been installed."
+
+ln -s vscode/settings.json "$HOME"/.vscode-server/data/Machine/settings.json
+
+extensions=(
+  "eamodio.gitlens"
+  "anweber.vscode-httpyac"
+  "ms-azuretools.vscode-docker"
+  "vivaxy.vscode-conventional-commits"
+  "cweijan.vscode-mysql-client2"
+  "GitHub.copilot"
+  "phpactor.vscode-phpactor"
+  "xdebug.php-debug"
+  "EditorConfig.EditorConfig"
+  "recca0120.vscode-phpunit"
+  "SanderRonde.phpstan-vscode"
 )
 
-# Iterate over the array and install each package
-for package in "${packages[@]}"; do
-  if brew list $1 &>/dev/null; then
-    echo "${1} is already installed"
-  else
-    echo "Installing $package..."
-    /home/linuxbrew/.linuxbrew/bin/brew install "$package"
+for extension in "${extensions[@]}"; do
+  # Check if extension is installed
+  if code --list-extensions | grep -q "$extension"; then
+    echo "$extension is already installed"
+    continue
   fi
+  code --install-extension "$extension"
 done
-
-echo "All packages have been installed."

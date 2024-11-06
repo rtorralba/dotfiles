@@ -1,0 +1,39 @@
+{
+  "editor.suggest.showWords": false,
+  "editor.showUnused": true,
+  "editor.rulers": [
+    120
+  ],
+  "php.validate.enable": true,
+  "php.validate.executablePath": "/usr/local/bin/php",
+  "editor.formatOnSave": false,
+  "php.suggest.basic": false,
+  "phpunit.showAfterExecution": "always",
+  "phpunit.args": [
+    "-c",
+    "phpunit.xml",
+    "--testsuite",
+    "ProjectTestSuite"
+  ],
+  "phpactor.config": {
+    "php_code_sniffer.enabled": true,
+    "language_server_phpstan.enabled": false
+  },
+  "phpstan.ignoreErrors": [
+    "Xdebug"
+  ],
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Listen for Xdebug",
+        "type": "php",
+        "request": "launch",
+        "port": 9003,
+        "pathMappings": {
+          "/var/www/api/": "${workspaceFolder}/"
+        }
+      }
+    ]
+  }
+}

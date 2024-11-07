@@ -35,5 +35,18 @@
         }
       }
     ]
-  }
+  },
+  "dev.containers.defaultExtensions": [
+    "eamodio.gitlens",
+    "anweber.vscode-httpyac",
+    "ms-azuretools.vscode-docker",
+    "vivaxy.vscode-conventional-commits",
+    "cweijan.vscode-mysql-client2",
+    "GitHub.copilot",
+    "phpactor.vscode-phpactor",
+    "xdebug.php-debug",
+    "EditorConfig.EditorConfig",
+    "recca0120.vscode-phpunit",
+    "SanderRonde.phpstan-vscode"
+  ]
 }

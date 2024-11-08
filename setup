@@ -24,7 +24,6 @@ packages=(
   lazygit
   git-delta
   luajit
-  neovim
 )
 
 # Iterate over the array and install each package

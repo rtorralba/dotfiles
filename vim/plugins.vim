@@ -18,8 +18,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'rtorralba/vim-shoot', { 'do': '\"./install.py\" chromedriver' }
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-test/vim-test'

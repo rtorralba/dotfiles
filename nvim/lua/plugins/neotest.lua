@@ -11,7 +11,9 @@ return {
   config = function()
     require("neotest").setup({
       adapters = {
-        require("neotest-phpunit"),
+        require("neotest-phpunit")({
+          filter_dirs = { "vendor" },
+        }),
       },
     })
   end,

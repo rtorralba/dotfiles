@@ -26,3 +26,5 @@ let g:shoot_save_path = $HOME . "/Imágenes/"
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 let g:airline#extensions#ale#enabled = 1
+
+let test#strategy = "vimterminal"

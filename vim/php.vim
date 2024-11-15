@@ -41,3 +41,5 @@ vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
 vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 
 let g:vdebug_options = {"path_maps": {"/var/www/html/api": getcwd()}, "port": 9003}
+
+autocmd FileType php set iskeyword+=$

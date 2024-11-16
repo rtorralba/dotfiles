@@ -80,6 +80,7 @@ augroup end
 xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
+nmap <C-a>  <Plug>(coc-codeaction)
 " Remap keys for applying code actions at the cursor position
 nmap <leader>ac  <Plug>(coc-codeaction-cursor)
 " Remap keys for apply code actions affect whole buffer

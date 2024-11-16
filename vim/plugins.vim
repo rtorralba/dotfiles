@@ -15,13 +15,11 @@ Plug 'alvan/vim-closetag'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'rtorralba/vim-shoot', { 'do': '\"./install.py\" chromedriver' }
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sheerun/vim-polyglot'
 Plug 'vim-test/vim-test'
 Plug 'unkiwii/vim-nerdtree-sync'
+Plug 'github/copilot.vim'
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'

@@ -10,6 +10,5 @@ source ~/dotfiles/vim/easygrep.vim
 source ~/dotfiles/vim/typescript.vim
 source ~/dotfiles/vim/nerdtree.vim
 source ~/dotfiles/vim/ale.vim
-source ~/dotfiles/vim/lsp.vim
 source ~/dotfiles/vim/otheroptions.vim
 source ~/dotfiles/vim/coc.vim

@@ -4,12 +4,6 @@ let php_htmlInStrings=1
 " Fix phpcs
 command PHPCSFix !php-cs-fixer fix %
 
-" Charge codeigniter snippets
-autocmd BufNewFile,BufRead *.php SnipMateLoadScope codeigniter
-" Charge simple mvc framework snippets
-autocmd BufNewFile,BufRead *.php SnipMateLoadScope simplemvcf
-autocmd BufNewFile,BufRead *.blade.php set filetype=blade.html
-
 " Include use statement
 nmap <Leader>u :call phpactor#UseAdd()<CR>
 

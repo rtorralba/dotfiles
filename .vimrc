@@ -7,7 +7,6 @@ source ~/dotfiles/vim/airline.vim
 source ~/dotfiles/vim/functions.vim
 source ~/dotfiles/vim/maps.vim
 source ~/dotfiles/vim/easygrep.vim
-source ~/dotfiles/vim/typescript.vim
 source ~/dotfiles/vim/nerdtree.vim
 source ~/dotfiles/vim/ale.vim
 source ~/dotfiles/vim/otheroptions.vim

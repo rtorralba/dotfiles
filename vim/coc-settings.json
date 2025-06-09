@@ -1,4 +1,0 @@
-{
-    "phpactor.enable": true,
-    "phpactor.path": "~/.vim/plugged/phpactor/bin/phpactor",
-}

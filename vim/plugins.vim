@@ -1,6 +1,5 @@
 " Mis Plugs
 Plug 'preservim/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'dense-analysis/ale'
 Plug 'preservim/nerdcommenter'
 Plug 'nanotech/jellybeans.vim'
 Plug 'vim-airline/vim-airline'
@@ -11,10 +10,14 @@ Plug 'tpope/vim-surround'
 Plug 'mg979/vim-visual-multi'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
 Plug 'vim-test/vim-test'
 Plug 'github/copilot.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'dense-analysis/ale'
+Plug 'rhysd/vim-lsp-ale'
 
 " GIT
 Plug 'tpope/vim-git'
@@ -25,4 +28,3 @@ Plug 'junegunn/gv.vim'
 
 " PHP
 Plug 'joonty/vdebug', { 'for': 'php' }
-Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}

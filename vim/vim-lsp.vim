@@ -29,6 +29,8 @@ function! s:on_lsp_buffer_enabled() abort
     autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
 
     let g:lsp_document_code_action_signs_enabled = 0
+  
+    vmap <C-a> :LspCodeAction<CR>
     
     " refer to doc to add more commands
 endfunction

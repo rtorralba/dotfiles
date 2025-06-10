@@ -2,3 +2,4 @@
 *.swo
 *~
 .vim/plugged
+.vim/undodir

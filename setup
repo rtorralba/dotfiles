@@ -32,4 +32,6 @@ curl -Lo $HOME/phpactor.phar https://github.com/phpactor/phpactor/releases/lates
 chmod a+x $HOME/phpactor.phar
 sudo mv $HOME/phpactor.phar /usr/local/bin/phpactor
 
+mkdir $HOME/undodir
+
 echo "All packages have been installed."

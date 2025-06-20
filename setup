@@ -12,6 +12,7 @@ sudo mkdir /home/linuxbrew/
 sudo chown $USER:users /home/linuxbrew/
 
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 /home/linuxbrew/.linuxbrew/bin/brew shellenv >>~/.bashrc
 
@@ -29,6 +30,6 @@ done
 
 curl -Lo $HOME/phpactor.phar https://github.com/phpactor/phpactor/releases/latest/download/phpactor.phar
 chmod a+x $HOME/phpactor.phar
-mv $HOME/phpactor.phar /usr/local/bin/phpactor
+sudo mv $HOME/phpactor.phar /usr/local/bin/phpactor
 
 echo "All packages have been installed."
